@@ -9,11 +9,15 @@
 #     https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
+import os
+
+
 BOT_NAME = 'fetch_exposed_data'
 
 SPIDER_MODULES = ['fetch_exposed_data.spiders']
 NEWSPIDER_MODULE = 'fetch_exposed_data.spiders'
 
+URL_BASE = os.environ.get('SCRAPY_URL_BASE', 'https://furythings.com')
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 USER_AGENT = 'fetch_exposed_data (+http://para.com)'
