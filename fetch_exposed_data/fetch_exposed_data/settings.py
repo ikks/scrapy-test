@@ -18,6 +18,9 @@ SPIDER_MODULES = ['fetch_exposed_data.spiders']
 NEWSPIDER_MODULE = 'fetch_exposed_data.spiders'
 
 URL_BASE = os.environ.get('SCRAPY_URL_BASE', 'https://furythings.com')
+STARTING_SOUL = 14
+ENDING_SOUL = 14
+MAX_GAP = 5
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 USER_AGENT = 'fetch_exposed_data (+http://para.com)'
